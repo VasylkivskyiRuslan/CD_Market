@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$("#slider").cycle({fx:"carousel",timeout:0,slides:"> li",carouselVisible:1,swipe:!0,swipeFx:"carousel",prev:".prev",next:".next"})});

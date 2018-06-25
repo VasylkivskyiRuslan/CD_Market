@@ -1,0 +1,10 @@
+@font-face{
+    font-family: 'BravoSC';
+    src: url('../fonts/BravoSC/BravoSC.eot');
+    src: url('../fonts/BravoSC/BravoSC.eot?iefix') format('embedded-opentype'),
+    url('../fonts/BravoSC/BravoSC.woff') format('woff'),
+    url('../fonts/BravoSC/BravoSC.ttf') format('truetype'),
+    url('../fonts/BravoSC/BravoSC.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
