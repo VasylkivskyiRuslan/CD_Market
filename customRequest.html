@@ -1,0 +1,597 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"><meta name="theme-color" content="#007eec"><!--favicon WM--><meta name="msapplication-TileColor" content="#007eec"><meta name="msapplication-TileImage" content="img/mstile_144x144.png?v=NmYO8WoKWA"><meta name="msapplication-config" content="/browserconfig.xml"><!--favicon android--><link rel="icon" type="image/png" href="img/favicon_16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="img/favicon_32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="img/favicon_96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="img/favicon_192x192.png" sizes="192x192"><!--favicon iOs--><link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon_57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="img/apple-touch-icon_60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon_72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon_76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon_114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon_120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon_144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon_152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon_180x180.png"><link rel="manifest" href="/manifest.json"><!--my own styles--><link rel="stylesheet" type="text/css" href="css/reset.css"><link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="css/jquery.arcticmodal-0.3.css"><link rel="stylesheet" type="text/css" href="css/jquery.multiselect.css"><link rel="stylesheet" type="text/css" href="css/fonts.css"><link rel="stylesheet" type="text/css" href="css/customRequest.css"><link rel="stylesheet" type="text/css" href="css/customRequest_media.css"><title>CUSTOM REQUEST</title></head><body><div class="header"><div class="header__nav"><div class="container"><div class="row"><div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><ul class="language"><li><a id="language" href="#"><img src="img/Russia.png" alt="">&nbsp;Рус&nbsp;<i aria-hidden="true" class="fa fa-caret-down"></i></a><ul id="languageDrop"><li><a href=""><img src="img/Russia.png" alt="">&nbsp;Рус&nbsp;</a></li><li><a href="#"><img src="img/United-States.png" alt="">&nbsp;Eng&nbsp;</a></li></ul></li></ul></div><div class="col-lg-5 col-lg-offset-6 col-md-6 col-md-offset-5 col-sm-8 col-sm-offset-3 col-xs-1 col-xs-offset-9"><ul class="nav"><li><a href="tel:1-888-483-3217"><i aria-hidden="true" class="fa fa-phone"></i>&nbsp;1-888-483-3217</a></li><li><a id="personalCabinet" href="#"><i aria-hidden="true" class="fa fa-user"></i>&nbsp;Your Account&nbsp;<i aria-hidden="true" class="fa fa-caret-down"></i></a><ul id="personalCabinetDrop"><li><a id="signIn" href="#">Sign In</a></li><li><a id="logIn" href="#">Log In</a></li></ul></li><li><a href="#"><i aria-hidden="true" class="fa fa-heart"></i>&nbsp;My Favorites&nbsp;<span>(0)</span></a></li><li><a href="cart.html"><i aria-hidden="true" class="fa fa-shopping-cart"></i>&nbsp;Cart&nbsp;<span>(0)</span></a></li></ul><div class="mobile__nav"><a id="mobileNav" href="#"><i aria-hidden="true" class="fa fa-bars"></i></a><a id="mobileNavClose" href="#"><i aria-hidden="true" class="fa fa-times"></i></a><ul><li><a href="tel:1-888-483-3217"><i aria-hidden="true" class="fa fa-phone"></i>&nbsp;&nbsp;1-888-483-3217</a></li><li><a id="personalCabinet-mobile" href="#"><i aria-hidden="true" class="fa fa-user"></i>&nbsp;&nbsp;Your Account&nbsp;</a></li><li><a href="#"><i aria-hidden="true" class="fa fa-heart"></i>&nbsp;&nbsp;My Favorites&nbsp;<span>(0)</span></a></li><li><a href="#"><i aria-hidden="true" class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Cart&nbsp;<span>(0)</span></a></li></ul></div></div></div></div></div><div class="header__popups"><div class="container"><div class="row"><div class="col-lg-5 col-lg-offset-3 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2"><div id="signInPopup"><h6>Sign In</h6><form id="sign"><ul><li class="fn"><p class="important">First Name:</p><label><span>*&nbsp;</span><input type="text" name="FN"></label></li><li class="ln"><p class="important">Last Name:</p><label><span>*&nbsp;</span><input type="text" name="LN"></label></li><li class="email"><p class="important">eMail:</p><label><span>*&nbsp;</span><input type="text" name="EMAIL"></label></li><li class="phone"><p class="important">Phone #:</p><label><span>*&nbsp;</span><input type="text" name="PHONE" class="js-phone"></label></li></ul><button type="submit">Sign In</button></form></div><div id="logInPopup"><h6>Log In</h6><form id="log"><ul><li><p>Name:&nbsp;</p><label><input type="text" name="name"></label></li><li><p>Password:&nbsp;</p><label><input type="password" name="password"></label></li></ul><button type="submit">Log In</button></form></div></div><div class="col-xs-8 col-xs-offset-2"><div id="authorMethod"><h6>Your Account</h6><p><span id="signIn-mobile">Sign In</span><span id="logIn-mobile">Log In</span></p></div></div></div></div></div><div class="header__headline"><div class="container"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="headline"><div class="logo"><a href="index.html"></a><div><p>Since 1992</p><p>Security solution for unsecured world!</p></div></div><div class="search"><input type="text" placeholder="search"><i aria-hidden="true" class="fa fa-search"></i></div></div></div></div></div></div><div class="header__mainNav"><div class="container"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><ul class="mainNav"><li><a href="id_holo_custom.html"><span>STOCK</span><span>Security Holograms</span></a><img src="img/arrow-point-to-down.png" alt=""></li><li class="active"><a href="semi.html"><span>SEMI-CUSTOM & CUSTOMIZABLE</span><span>Security Holograms</span></a><img src="img/arrow-point-to-down.png" alt=""></li><li><a href="fully.html"><span>FULLY CUSTOM</span><span>Security Holograms</span></a><img src="img/arrow-point-to-down.png" alt=""></li><li><a href="id_holo.html"><span>ID HOLOGRAMS</span></a><img src="img/arrow-point-to-down.png" alt=""></li><li><a href="#"><span>LAMINATING POUCHES</span><span>Holograms</span></a><img src="img/arrow-point-to-down.png" alt=""></li><li><a href="#"><span>SECURITY PRODUCTS</span><span>Other</span></a><img src="img/arrow-point-to-down.png" alt=""></li></ul><div class="mobile__mainNav"><span id="mobileMainNav"><i aria-hidden="true" class="fa fa-bars"></i></span><span id="mobileMainNavClose"><i aria-hidden="true" class="fa fa-times"></i></span><ul><li><a href="id_holo_custom.html"><span>STOCK</span><span>Security Holograms</span></a></li><li><a href="semi.html"><span>SEMI-CUSTOM & CUSTOMIZABLE</span><span>Security Holograms</span></a></li><li><a href="fully.html"><span>FULLY CUSTOM</span><span>Security Holograms</span></a></li><li><a href="id_holo.html"><span>ID HOLOGRAMS</span></a></li><li><a href="#"><span>LAMINATING POUCHES</span><span>Holograms</span></a></li><li><a href="#"><span>SECURITY PRODUCTS</span><span>Other</span></a></li></ul><div class="search"><input type="text" placeholder="search"><i aria-hidden="true" class="fa fa-search"></i></div></div></div></div></div></div></div><div class="content"><div class="container"><div class="row"><div class="col-lg-3 col-md-3"><div class="aside"><div class="aside__vhLogo"><p>CREATE</p><p>VIRTUAL</p><p>HOLOGRAM</p></div><div class="aside__menu"><ul><li><a href="#">About holograms</a></li><li><a href="#"><i aria-hidden="true" class="fa fa-star"></i>New Products</a></li><li><a href="#">Why Holograms?</a></li><li><a href="#">How to use it?</a></li><li><a href="advice.html">Advice and Price</a></li><li><a href="customRequest.html">Custom Request</a></li><li><a href="samples.html">Samples</a></li><li><a href="intaglio.html">Intaglio</a></li><li><a href="#">Freebies</a></li><li><a href="#">Link to Us</a></li><li><a href="#">Hellogram ®</a></li><li><a href="feedback.html">Feedback</a></li><li><a href="#">Legal</a></li><li><a href="contactUs.html">Contact Us</a></li></ul></div><div class="aside__bestHolo"><a href="#"><h2>The BEST Hologram</h2><img src="img/products/holo_1.jpg" alt=""><span>LARGEST UNITED STATES “VOIDABLE”, USA SUPER
+SECURITY HOLOGRAMS WITH / OR WITHOUT UNIQUE
+SERIAL NUMBERS</span></a></div><div class="aside__newHolo"><a href="#"><h2>NEW AMAZING PRODUCTS</h2><img src="img/products/holo_2.jpg" alt=""><span>HOLOGRAPHIC ID OVERLAY Transparent EAGLE</span></a></div><div class="aside__threeD"><a href="#"><h2>3D Technologies</h2><img src="img/products/holo_3.jpg" alt=""><span>3D Transparent Voidable Holograms</span></a></div><div class="aside__examples"><h2>Some examples of our work</h2><ul class="slider"><li><a href="#"><img src="img/products/holo_6.jpg" alt=""></a><a href="#"><img src="img/products/holo_5.jpg" alt=""></a><a href="#"><img src="img/products/holo_6.jpg" alt=""></a><a href="#"><img src="img/products/holo_5.jpg" alt=""></a></li><li><a href="#"><img src="img/products/holo_5.jpg" alt=""></a><a href="#"><img src="img/products/holo_6.jpg" alt=""></a><a href="#"><img src="img/products/holo_5.jpg" alt=""></a><a href="#"><img src="img/products/holo_6.jpg" alt=""></a></li></ul><div class="controls"><span class="prev"><i aria-hidden="true" class="fa fa-angle-double-left"></i>Previous Sample</span><span class="next"><i aria-hidden="true" class="fa fa-circle dot"></i>Next Sample<i aria-hidden="true" class="fa fa-angle-double-right"></i></span></div></div><div class="aside__custom"><h2>CUSTOM HOLOGRAM LAMINATING POUCHES FOR HEAT
+LAMINATION</h2><p>Specially designed Custom heat seal laminating
+pouches with transparent holographic image. Can
+e use to laminate ID badges, membership cards,
+parking permits, passes and documents. Insert
+PVC cards, synthetic imprinted papers or plain
+paper. Add holographic images, UV readable or
+optically readable coating along with serial
+numbers to protect what you need to be most
+secure. Our New Technology allows to manufacture
+custom holographic pouches in many sizes up to
+10.6" x 19.7" (270mm x 500mm) with a minimum
+quantity of 2,000 pouches<br><a href="#"><i aria-hidden="true" class="fa fa-angle-double-right"></i><i aria-hidden="true" class="fa fa-angle-double-right"></i></a></p></div></div></div><div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"><diV class="customRequest"><div class="customRequest__headline"><h5>Custom Quote Request Form</h5></div><div class="customRequest__info"><p>Fill out all the fields to help us better
+determine what type of hologram security you
+need for your project. We will advice you
+with the best technological and cost
+effective solution.</p><p>If you want to see the variety of security
+holograms and wish to have "hands on"
+experience in testing them, you can order a<a href="#">&nbsp;Pack of Samples&nbsp;</a>thru our secure server.</p><p>If you have questions, use Help links related
+to particular question in the form.</p></div><div class="customRequest__form"><div class="customRequest__form__headline"><form id="orderForm"><ul><li><p class="important">Security Level:</p><label><select><option>Stock Hologram</option><option>Customized Stock</option><option>Fully Custom</option><option>Not Sure</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="securityLevel">Help</span><div style="display: none"><ul id="securityLevelHelp" class="customRequest__popup"><li>1."Stock"
+Hologram This
+option provides
+same functional
+level of security
+as the fully
+Custom Holograms
+at a fraction of
+the cost and is
+recommended for
+tightly budgeted
+projects. Does
+not require setup
+fee. Very popular
+with unique
+Sequential
+Numbering.</li><li>2.Customized,
+Personalized
+"Stock" Hologram
+- This option
+provides the same
+functional level
+of security and
+is recommended
+for medium volume
+projects. For a
+much lower than
+fully custom
+one-time setup
+fee we will
+personalize our
+"Stock" Originator
+. It will be
+properly
+registered with
+The United States
+Authorities to
+the customer's
+name and can be
+used for the same
+customer reorders.</li><li>3.Fully Custom
+Hologram This
+option provides
+the highest level
+of security and
+is recommended
+for large volume
+projects. For a
+one-time setup
+fee we will
+design and create
+unique images
+implemented in
+Custom Originator.
+ The design will
+be properly
+registered with
+The United States
+Authorities to
+the customer's
+name and can be
+used for the same
+customer reorders.</li><li><span id="securityLevelClose">Close Window</span></li></ul></div></label></li><li><p class="important">Type of Hologram:</p><label><select><option>Dot Matrix(Digital)</option><option>2D/3D</option><option>3D Holograms</option><option>Not Sure</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="typeHolo">Help</span><div style="display: none"><ul id="typeHoloHelp" class="customRequest__popup"><li>1.Dot
+Matrix
+(Digital)
+Hologram allows
+implementing
+unlimited
+computer
+generated images
+and ideas in
+design. Security
+Hologram of this
+type has
+remarkable
+brightness,
+contrast,
+sharpness
+clearness and
+depth. Digital
+printing
+technology with
+100-1,000 dpi
+makes Dot Matrix
+the most common
+type of Security
+Hologram widely
+used for
+self-adhesive
+labels applied on
+different
+products to
+prevent
+counterfeiting.The
+cost of Custom
+Originator is
+usually $2,500-$3,
+500, depends on
+image resolution
+DPI (Dots Per
+Inch).</li><li>2.2D/3D Hologram
+contains several
+optical layers
+with images
+visually placed
+one behind
+another with
+visual depth to
+produce an effect
+of
+three-dimensional
+structure.
+Created using
+line art,can
+contain up to 3
+layers and up to
+6 colors. The
+best Security
+Hologram to
+protect Documents,
+Securities and
+Brand Names.
+Highly recommended
+ for Large and
+Medium volume
+projects. The
+cost of Custom
+Originator is
+usually $3,750 to
+$4,800.</li><li>3.3D Hologram is
+the most
+realistic image
+of the object. In
+order to make
+Custom Originator
+(The cost is
+around $6,000-$9,
+000), it is
+necessary to use
+a real object, or
+its model at 1/1
+scale. Three
+Dimensional
+Security Hologram
+is the
+best-recommended
+way for large
+volume projects.</li><li><span id="typeHoloClose">Close Window</span></li></ul></div></label></li><li><p class="important">Type of Image:</p><label><select><option>Centered</option><option>Wallpaper</option><option>Not Sure</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="typeImage">Help</span><div style="display: none"><ul id="typeImageHelp" class="customRequest__popup"><li>Centered -
+Holographic image
+is in the center
+of the die-cut.</li><li>Wallpaper -
+Randomly
+repeating
+holographic
+pattern.</li><li><span id="typeImageClose">Close Window</span></li></ul></div></label></li><li><p class="important">Image Resolutions:</p><label><select><option>Non Dot Matrix</option><option>100 dpi</option><option>200 dpi</option><option>400 dpi</option><option>600 dpi</option><option>800 dpi</option><option>1 000 dpi</option><option>Not Sure</option></select></label></li><li><p class="important">Type of Label:</p><label><select><option>Pressure Sensitive
+Metallized</option><option>Pressure Sensitive
+Transparent</option><option>Pressure Sensitive
+Overlays</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="typeLabel">Help</span><div style="display: none"><ul id="typeLabelHelp" class="customRequest__popup"><li>Pressure
+Sensitive-
+Security Hologram
+can be applied to
+any smooth and
+clean surface.
+Cannot be
+reapplied if
+removed.</li><li>Clear (See-thru)
+Film with
+Security
+Holographic
+Pattern ? can be
+applied as
+overlay to ID
+cards and
+documents. The
+excellent way to
+improve security
+of ID cards,
+Documents, Brand
+Name labels. Can
+be adhered over
+Signatures on the
+documents to
+authenticate
+them. In most
+cases works
+better than Seal
+against forgery
+and counterfeiting.</li><li><span id="typeLabelClose">Close Window</span></li></ul></div></label></li><li><p class="important">Shape of Label:</p><label><select><option>Circle</option><option>Square</option><option>Rectangle</option><option>Oval</option><option>Custom</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="shapeLabel">Help</span><div style="display: none"><ul id="shapeLabelHelp" class="customRequest__popup"><li>Choose the shape
+first, then use
+"Copy and Paste"
+to insert the
+size of your
+choice in the
+"Size of Label"
+box.</li><li>1.Circle ?
+die-cut
+recommended
+sizes: C1=17mm;
+C2=.6692"; C3=2";
+C4=1.875";
+C5=.9843";
+C6=.748";
+C7=1"; C8=.5".<br>Use build-in
+"inch to mm"
+converter!</li><li>2.Square ?
+die-cut
+recommended
+sizes: S1=15mm x
+15mm; S2=.625" x
+.625"; S3=1.25" x
+1.25"; S4=.8661"
+x .=8661"; S5=.5"
+x .5"1; S6=.75" x
+1.75"; S7=.669" x
+.669"; S8=1.125"
+x 1.125";
+S9=.7874" x
+.7874"; S10=1
+.1811" x 1.1811";
+S11=.75" x .75";
+S12=1" x 1";<br>Use build-in
+"inch to mm"
+converter.</li><li>3.Rectangle ?
+die-cut
+recommended sizes:<br>R1=20mm x 10mm;
+R2=.875" x
+1.875"; R3=1.625"
+x 1"; R4=.4724" x
+.9449"; R5=.875"
+x 1"; R6=2" x
+3.125"; R7=1.4" x
+.45"; R8=.903" x
+.607"; R9=.433" x
+1.378"; R10=.5906"
+ x 1.3778";
+R11=1.25" x 2.5";
+R12=.9055" x
+1.378"; R13=2.875"
+ x .875";
+R14=.6875" x
+1.4375"; R15=.25"
+x .625";
+R16=.625" x .75";
+R17=.7874" x
+1.1811";
+R18=2.3622" x
+1.7716";
+R19=2.375" x
+.75"; R20=1.0629"
+x 1.2598"; R21=1"
+X 1.375".<br>Use build-in
+"inch to mm"
+converter!</li><li>4.Oval ? die-cut
+recommended sizes:<br>OV1=.3937" x
+.7874"; OV2=.9531"
+ x 1.5";
+OV3=1.325" x
+.815"; OV4=.375"
+x .75"; OV5=.3"
+x.75"; OV6=.875"
+x .4375".<br>Use build-in
+"inch to mm"
+converter!</li><li>5.Custom ? images
+can be die-cut in
+variety of shapes
+and sizes to
+increase the
+level of
+customization.
+One time charge
+for Custom
+die-cut from
+$600.00</li><li><span id="shapeLabelClose">Close Window</span></li></ul></div></label></li><li><p class="important">Size of Label: (mm)<br><span>Inch to Millimeters</span><span class="conv">&nbsp;Converter</span><div style="display: none"><ul id="converter" class="converter"><li><label><span>Inches:</span><input id="inputInchec" type="number" placeholder="Inches" oninput="lengthConverter(this.value)" onchange="lengthConverter"></label></li><li><label><span>Millimeters:</span><p id="outputMeters"></p></label></li><li><span id="converterClose">Close Window</span></li></ul></div></p><label><input name="size" type="number" placeholder="please insert size"><i aria-hidden="true" class="fa fa-question-circle"></i><span id="sizeLabel">Help</span><div style="display: none"><ul id="sizeLabelHelp" class="customRequest__popup"><li>Choose the shape
+first, then use
+"Copy and Paste"
+to insert the
+size of your
+choice in the
+"Size of Label"
+box.</li><li>1.Circle ?
+die-cut
+recommended
+sizes: C1=17mm;
+C2=.6692"; C3=2";
+C4=1.875";
+C5=.9843";
+C6=.748";
+C7=1"; C8=.5".<br>Use build-in
+"inch to mm"
+converter!</li><li>2.Square ?
+die-cut
+recommended
+sizes: S1=15mm x
+15mm; S2=.625" x
+.625"; S3=1.25" x
+1.25"; S4=.8661"
+x .=8661"; S5=.5"
+x .5"1; S6=.75" x
+1.75"; S7=.669" x
+.669"; S8=1.125"
+x 1.125";
+S9=.7874" x
+.7874"; S10=1
+.1811" x 1.1811";
+S11=.75" x .75";
+S12=1" x 1";<br>Use build-in
+"inch to mm"
+converter.</li><li>3.Rectangle ?
+die-cut
+recommended sizes:<br>R1=20mm x 10mm;
+R2=.875" x
+1.875"; R3=1.625"
+x 1"; R4=.4724" x
+.9449"; R5=.875"
+x 1"; R6=2" x
+3.125"; R7=1.4" x
+.45"; R8=.903" x
+.607"; R9=.433" x
+1.378"; R10=.5906"
+ x 1.3778";
+R11=1.25" x 2.5";
+R12=.9055" x
+1.378"; R13=2.875"
+ x .875";
+R14=.6875" x
+1.4375"; R15=.25"
+x .625";
+R16=.625" x .75";
+R17=.7874" x
+1.1811";
+R18=2.3622" x
+1.7716";
+R19=2.375" x
+.75"; R20=1.0629"
+x 1.2598"; R21=1"
+X 1.375".<br>Use build-in
+"inch to mm"
+converter!</li><li>4.Oval ? die-cut
+recommended sizes:<br>OV1=.3937" x
+.7874"; OV2=.9531"
+ x 1.5";
+OV3=1.325" x
+.815"; OV4=.375"
+x .75"; OV5=.3"
+x.75"; OV6=.875"
+x .4375".<br>Use build-in
+"inch to mm"
+converter!</li><li>5.Custom ? images
+can be die-cut in
+variety of shapes
+and sizes to
+increase the
+level of
+customization.
+One time charge
+for Custom
+die-cut from
+$600.00</li><li><span id="sizeLabelClose">Close Window</span></li></ul></div></label></li><li><p class="important">Quantity (1,000 minimum for
+stock; 5,000 minimum for
+Custom):</p><label><input name="quantity" type="number" placeholder="please insert quantity"><i aria-hidden="true" class="fa fa-question-circle"></i><span id="quantity">Help</span><div style="display: none"><ul id="quantityHelp" class="customRequest__popup"><li>1.Fully Custom
+Security Hologram
+- there is no
+suggested
+minimum, but if
+you order your
+own Originator,
+will you make
+just a few
+thousand Security
+Holograms?</li><li>2.Customized
+Stock Security
+Hologram - there
+is suggested
+minimum of 5,000.</li><li>3.Stock Security
+Hologram -
+suggested minimum
+is 1,000 pieces,
+but order can be
+smaller with
+higher pricing.</li><li><span id="quantityClose">Close Window</span></li></ul></div></label></li><li><p class="important">Sequential Numbering:</p><label><select><option>No Numbering</option><option>Ink Printing</option><option>Thermal Printing</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="sequentialNumbering">Help</span><div style="display: none"><ul id="sequentialNumberingHelp" class="customRequest__popup"><li>Numbers and
+Letters
+overprinted on
+Security
+Holograms in
+Sequence. The
+Excellent way to
+control inventory,
+ track product etc.<br>May be printed by:</li><li>1.Special ink
+(inkjet printing),
+ low cost
+sequential
+numbering</li><li>2.Thermal
+Printing, the
+cost effective
+sequential
+numbering.</li><li><span id="sequentialNumberingClose">Close Window</span></li></ul></div></label></li><li><p class="important">Security Features:</p><label><select><option>Standard</option><option>Tamper Evident</option><option>Patterned Release</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="securityFeatures">Help</span><div style="display: none"><ul id="securityFeaturesHelp" class="customRequest__popup"><li>Tamper Evident ?
+Security Hologram
+can be applied to
+any smooth and
+clean surface.
+Will Self-Destruct
+if removed. The
+remaining portion
+of the Security
+Hologram will be
+invalid and
+unusable. Usually
+the word ?Void?
+left on the
+surface.</li><li><span id="securityFeaturesClose">Close Window</span></li></ul></div></label></li><li><p class="important">Extra Security Features:</p><label><select><option>No Extras</option><option>Micro text</option><option>Micro image</option><option>Covert image</option><option>Bar Coding Human
+readable</option><option>Bar Coding Machine
+Readable</option><option>Fractal Structures</option><option>Combined</option><option>Adding Print</option><option>Not Sure</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="extraSecurity">Help</span><div style="display: none"><ul id="extraSecurityHelp" class="customRequest__popup"><li>Micro text or
+micro image can
+be printed as
+wallpaper, or in
+any particular
+place of Security
+Hologram. They
+can be invisible
+(or visible) to
+naked eye,
+magnified glass
+has to be used to
+read text or see
+picture.The pice
+of implementing
+Micro image or
+Micro-Text in the
+Originator starts
+at $5,000 and has
+to be quoted per
+each project.</li><li>Covert ?
+Specially
+implemented
+elements from
+highly secure
+machine readable,
+for example laser
+pointer, to
+unique graphics
+that can be
+identified only
+by trained
+personal.</li><li>Combined-Different
+styles of
+Holography such
+as Dot Matrix
+drop ins onto
+2D/3D Images.</li><li>Adding Print in
+register to image
+with standard,
+flourescent,
+thermochromatic
+incs.</li><li><span id="extraSecurityClose">Close Window</span></li></ul></div></label></li><li><p class="important">Surface to be applied to:</p><label><select><option>Paper</option><option>Coated Paper</option><option>Plastic</option><option>Glass</option><option>Corrigated</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="surface">Help</span><div style="display: none"><ul id="surfaceHelp" class="customRequest__popup"><li>To make your
+Security Hologram
+really ?Security?
+specially
+formulated
+adhesive has to
+be used for each
+type, especially
+with Tamper
+Evident labels.
+We need to know
+as much as
+possible about
+the surface,
+material, product
+the Security
+Holograms will be
+applied to. It
+will give us an
+opportunity to
+potentially
+upgrade your
+Security
+Holograms if we
+have better
+understanding of
+it?s purpose. Is
+it strictly
+Security or is it
+a Commercial
+application?
+Please, use
+Comments section
+to describe.</li><li><span id="surfaceClose">Close Window</span></li></ul></div></label></li><li><p class="important">How will it be applied:</p><label><select><option>Hand Applied</option><option>Handheld Applicator</option><option>Semi Automatic
+Applicator</option><option>Machine Applied</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="applied">Help</span><div style="display: none"><ul id="appliedHelp" class="customRequest__popup"><li>1.Machine
+Application ? If
+you are going to
+use automatic
+label applicator,
+please let us
+know what size of
+the core and roll
+is suitable.</li><li>2.Handheld
+Applicator ? If
+you are going to
+use handheld
+label applicator,
+please let us
+know what size of
+the core and roll
+is suitable.</li><li>3.Manual
+Application ? If
+you are going to
+apply Security
+Holograms by
+hand, please let
+us know in what
+size of sheets,
+or rolls you
+prefer.</li><li><span id="appliedClose">Close Window</span></li></ul></div></label></li><li><p class="important">Will the label be Overprinted?:</p><label><select><option>None</option><option>1 Color</option><option>2 Color</option><option>3 Color</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="overprinted">Help</span><div style="display: none"><ul id="overprintedHelp" class="customRequest__popup"><li>We currently
+offer 3 color
+printing in
+register to the
+image. This can
+be all 3 colors
+on surface with
+hologram, 2 on
+surface and 1 on
+back of liner, 1
+on surface, 2 on
+back of liner or
+all 3 colors on
+back and
+holographic
+surface.</li><li>The price for
+Print Plates will
+be $75 per color.</li><li><span id="overprintedClose">Close Window</span></li></ul></div></label></li><li><p class="important">Security Holograms Packing:</p><label><select><option>Rolls of Holograms</option><option>Sheets of Holograms</option><option>Individual Hologram</option></select><i aria-hidden="true" class="fa fa-question-circle"></i><span id="securityHoloPack">Help</span><div style="display: none"><ul id="securityHoloPackHelp" class="customRequest__popup"><li>1.Machine
+Application ? If
+you are going to
+use automatic
+label applicator,
+please let us
+know what size of
+the core and roll
+is suitable.</li><li>2.Handheld
+Applicator ? If
+you are going to
+use handheld
+label applicator,
+please let us
+know what size of
+the core and roll
+is suitable.</li><li>3.Manual
+Application ? If
+you are going to
+apply Security
+Holograms by
+hand, please let
+us know in what
+size of sheets,
+or rolls you
+prefer.</li><li><span id="securityHoloPackClose">Close Window</span></li></ul></div></label></li><li><p class="important">Promotional Code:</p><label><input type="text" name="promo" placeholder="Not Applicable"><i aria-hidden="true" class="fa fa-question-circle"></i><span id="promo">Help</span><div style="display: none"><ul id="promoHelp" class="customRequest__popup"><li>If you received
+Promotional code
+please, place it
+here.</li><li><span id="promoClose">Close Window</span></li></ul></div></label></li><li><p class="important">Comments:<br><span>Please, provide as much
+as possible information
+about your product. It
+will help us better
+fulfill your request</span></p><label><textarea></textarea></label></li></ul></form></div></div></diV><diV class="requestContact"><div class="requestContact__headline"><h6>Contact Information</h6><p>Fields marked with<b>&nbsp;*&nbsp;</b>are mandatory</p><form id="contactForm"><ul><li class="companyName"><p class="important">Company Name:</p><label><span>*&nbsp;</span><input type="text" name="companyName" placeholder="Company Name"></label></li><li class="contactName"><p class="important">Contact Name:</p><label><span>*&nbsp;</span><input type="text" name="contactName" placeholder="Contact name"></label></li><li class="address"><p class="important">Address:</p><label><span>*&nbsp;</span><input type="text" name="address" placeholder="Address"></label></li><li class="city"><p class="important">City:</p><label><span>*&nbsp;</span><input type="text" name="city" placeholder="City"></label></li><li class="state"><p class="important">State:<span>&nbsp;(required for USA)</span></p><label><span>*&nbsp;</span><select><option>NY</option><option>CA</option><option>NC</option></select><i aria-hidden="true" class="fa fa-caret-down"></i><p>or Province</p><input type="text" name="province" placeholder="Province"></label></li><li class="country"><p class="important">Country:</p><label><span>*&nbsp;</span><select name="country"><option>Russia</option><option>USA</option><option>Canada</option></select><i aria-hidden="true" class="fa fa-caret-down"></i></label></li><li class="postalCode"><p class="important">Postal Code:</p><label><span>*&nbsp;</span><input type="text" name="postalCode" placeholder="Postal Code"></label></li><li class="email"><p class="important">eMail:</p><label><span>*&nbsp;</span><input type="text" name="email" placeholder="eMail"></label></li><li class="phone"><p class="important">Phone #:</p><label><span>*&nbsp;</span><input type="text" name="phone" placeholder="Phone" class="js-phone"></label></li><li class="fax"><p class="important">Fax #:</p><label><span>*&nbsp;</span><input type="text" name="fax" placeholder="Fax #"></label></li><li class="distrCode"><p class="important">Distributor Code:</p><label><span>&nbsp;</span><input type="text" name="distrCode"></label></li><li class="protectionCode"><P>PROTECTION CODE?</P><label><span>*&nbsp;</span><input type="text" name="protectionCode" placeholder="Enter protection code displayed on the picture:"></label></li><li class="submitButton"><button id="submit" class="submit">Submit</button></li></ul></form></div></diV><div class="aside"><div class="aside__vhLogo"><p>CREATE</p><p>VIRTUAL</p><p>HOLOGRAM</p></div><div class="aside__menu"><ul><li><a href="#">About holograms</a></li><li><a href="#"><i aria-hidden="true" class="fa fa-star"></i>New Products</a></li><li><a href="#">Why Holograms?</a></li><li><a href="#">How to use it?</a></li><li><a href="advice.html">Advice and Price</a></li><li><a href="customRequest.html">Custom Request</a></li><li><a href="samples.html">Samples</a></li><li><a href="intaglio.html">Intaglio</a></li><li><a href="#">Freebies</a></li><li><a href="#">Link to Us</a></li><li><a href="#">Hellogram ®</a></li><li><a href="feedback.html">Feedback</a></li><li><a href="#">Legal</a></li><li><a href="contactUs.html">Contact Us</a></li></ul></div><div class="aside__bestHolo"><a href="#"><h2>The BEST Hologram</h2><img src="img/products/holo_1.jpg" alt=""><span>LARGEST UNITED STATES “VOIDABLE”, USA SUPER
+SECURITY HOLOGRAMS WITH / OR WITHOUT UNIQUE
+SERIAL NUMBERS</span></a></div><div class="aside__newHolo"><a href="#"><h2>NEW AMAZING PRODUCTS</h2><img src="img/products/holo_2.jpg" alt=""><span>HOLOGRAPHIC ID OVERLAY Transparent EAGLE</span></a></div><div class="aside__threeD"><a href="#"><h2>3D Technologies</h2><img src="img/products/holo_3.jpg" alt=""><span>3D Transparent Voidable Holograms</span></a></div><div class="aside__examples"><h2>Some examples of our work</h2><ul class="slider"><li><a href="#"><img src="img/products/holo_6.jpg" alt=""></a><a href="#"><img src="img/products/holo_5.jpg" alt=""></a><a href="#"><img src="img/products/holo_6.jpg" alt=""></a><a href="#"><img src="img/products/holo_5.jpg" alt=""></a></li><li><a href="#"><img src="img/products/holo_5.jpg" alt=""></a><a href="#"><img src="img/products/holo_6.jpg" alt=""></a><a href="#"><img src="img/products/holo_5.jpg" alt=""></a><a href="#"><img src="img/products/holo_6.jpg" alt=""></a></li></ul><div class="controls"><span class="prev"><i aria-hidden="true" class="fa fa-angle-double-left"></i>Previous Sample</span><span class="next"><i aria-hidden="true" class="fa fa-circle dot"></i>Next Sample<i aria-hidden="true" class="fa fa-angle-double-right"></i></span></div></div><div class="aside__custom"><h2>CUSTOM HOLOGRAM LAMINATING POUCHES FOR HEAT
+LAMINATION</h2><p>Specially designed Custom heat seal laminating
+pouches with transparent holographic image. Can
+e use to laminate ID badges, membership cards,
+parking permits, passes and documents. Insert
+PVC cards, synthetic imprinted papers or plain
+paper. Add holographic images, UV readable or
+optically readable coating along with serial
+numbers to protect what you need to be most
+secure. Our New Technology allows to manufacture
+custom holographic pouches in many sizes up to
+10.6" x 19.7" (270mm x 500mm) with a minimum
+quantity of 2,000 pouches<br><a href="#"><i aria-hidden="true" class="fa fa-angle-double-right"></i><i aria-hidden="true" class="fa fa-angle-double-right"></i></a></p></div></div></div></div></div></div><div class="footer"><div class="footer__nav"><div class="container"><div class="row"><div class="col-lg-3 col-md-3 col-sm-4 col-xs-8"><div class="footer__menu"><ul><li><a href="#">About holograms</a></li><li><a href="#">New Products</a></li><li><a href="#">Why Holograms?</a></li><li><a href="#">How to use it?</a></li><li><a href="#">Advice and Price</a></li><li><a href="#">Custom Request</a></li><li><a href="#">Samples</a></li></ul><ul><li><a href="#">Intaglio</a></li><li><a href="#">Freebies</a></li><li><a href="#">Link to Us</a></li><li><a href="#">Hellogram ®</a></li><li><a href="#">Feedback</a></li><li><a href="#">Legal</a></li><li><a href="#">Contact Us</a></li></ul></div></div><div class="col-lg-2 col-lg-offset-2 col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1 col-xs-4"><div class="footer__menu"><ul><li><a href="#">Connect with us</a></li><li><a href="#">Purchase returns</a></li><li><a href="#">Site Map</a></li></ul><ul><li><a href="#">Your Account</a></li><li><a href="#">History of orders</a></li><li><a href="#">My favorites</a></li></ul></div></div><div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12"><ul><li><a href="#"><span>Stock&nbsp;</span><span>Holograms</span></a></li><li><a href="#"><span>SEMI-CUSTOM & CUSTOMIZABLE&nbsp;</span><span>Holograms</span></a></li><li><a href="#"><span>Fully Custom&nbsp;</span><span>Holograms</span></a></li><li><a href="#"><span>ID Holograms&nbsp;</span><span></span></a></li><li><a href="#"><span>LAMINATING POUCHES&nbsp;</span><span>Holograms</span></a></li><li><a href="#"><span>Security Products&nbsp;</span><span>Other</span></a></li></ul></div></div></div></div><div class="footer__info"><div class="container"><div class="row"><div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"><div class="copyright"><p>Security Hologram © 1999-2016. All rights reserved.</p><p>Security Hologram ® is the Trade Mark of Security Hologram, LLC.</p><p>Duplication of this site, or it's elements strictly prohibited.</p></div></div><div class="col-lg-1 col-lg-offset-1 col-md-1 col-md-offset-1 col-sm-1 col-xs-12"><div class="social"><ul><li><a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a></li><li><a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a></li><li><a href="#"><i aria-hidden="true" class="fa fa-google-plus"></i></a></li></ul></div></div><div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-5 col-xs-12"><div class="payments"><p>All Major Payments Accepted</p><ul><li><img src="img/visa.jpg" alt=""></li><li><img src="img/american_express.jpg" alt=""></li><li><img src="img/masterCard.jpg" alt=""></li><li><img src="img/PayPal.jpg" alt=""></li><li><img src="img/western_union.jpg" alt=""></li></ul></div></div></div></div></div></div><div style="display: none"><div id="thanksOrder" class="thanksOrder"><ul><li><P>!!!ANY TEXT YOU NEED!!!</P></li><li><span id="thanksOrderClose">Close window</span></li></ul></div></div><script src="js/jquery-3.3.1.min.js"></script><script src="js/jquery.arcticmodal-0.3.min.js"></script><script src="js/jquery.cycle2.js"></script><script src="js/jquery-ui.min.js"></script><script src="js/jquery.maskedinput.min.js"></script><script src="js/jquery.validate.min.js"></script><script src="js/jquery.multiselect.js"></script><script src="js/main.js"></script></body></html>
